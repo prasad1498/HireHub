@@ -1,0 +1,46 @@
+<%- include('./partials/header.ejs')  %>
+
+    <div class="col-6 m-auto">
+        <h2>New Form To Post a Job</h2>
+        <form action="/jobs" method="post">
+            <div>
+                <label for="name" class="form-label">Enter company name</label>
+                <input type="text" class="form-control" name="name" id="name">
+            </div>
+            <div>
+                <label for="exp" class="form-label">Required Experiance</label>
+                <input type="text" class="form-control" name="exp" id="exp">
+            </div>
+            <div>
+                <label for="address" class="form-label">Enter company address</label>
+                <input type="text" class="form-control" name="address" id="address" value="Pan">
+            </div>
+            <div>
+                <label for="pakage" class="form-label">pakage (lpa)= </label>
+                <input type="number" class="form-control" name="pakage" id="pakage">
+            </div>
+            <div>
+                <label for="logo" class="form-label">Insert company's logo</label>
+                <input type="text" class="form-control" name="logo" id="logo">
+            </div>
+            <div>
+                <label for="deadlinne" class="form-label">Insert the Last Date of Application</label>
+                <input type="date" class="form-control" name="deadline" id="deadline">
+            </div>
+            <div>
+                <label for="info" class="form-label">Enter Company's Information</label>
+                <input type="text" class="form-control" name="info" id="info">
+            </div>
+            <div>
+                <label for="type" class="form-label">Job Type</label>
+                <input type="text" class="form-control" name="type" id="type">
+            </div>
+            <div class="pt-3">
+                <button class="m-auto btn btn-primary btn-sm"type="submit">Submit</button>
+                <button class=" btn btn-danger btn-sm"type="delete"><a href="/jobs/new" style="text-decoration: none;">Cancle</a></button>
+            </div>
+        </form>
+
+    </div>
+
+    <%- include('./partials/footer.ejs')  %>

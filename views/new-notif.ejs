@@ -1,0 +1,24 @@
+<%- include('./partials/header.ejs')  %>
+
+    <h1></h1>
+    <div class="col-6 m-auto">
+        <h2>Post a New Notification</h2>
+        <form action="/notifications" method="post">
+            <div>
+                <label for="body" class="form-label">Notification Content</label>
+                <input type="text" class="form-control" name="body" id="body">
+            </div>
+            <div>
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" name="author" id="author">
+            </div>
+
+            <div class="pt-3">
+                <button class="m-auto btn btn-primary btn-sm"type="submit">Submit</button>
+                <button class=" btn btn-danger btn-sm"type="delete"><a href="/notifications" style="text-decoration: none;">Cancle</a></button>
+            </div>
+        </form>
+
+    </div>
+
+    <%- include('./partials/footer.ejs')  %>

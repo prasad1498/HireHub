@@ -1,0 +1,12 @@
+<%- include('./partials/header.ejs')  %>
+
+<h1> <%= user.name %> </h1>
+
+<button class="mt-4 btn btn-primary btn-sm"><a href="/user/<%= user._id %>/edit"
+    style="text-decoration: none;">Edit</a></button>
+<p></p>
+<form action="/user/<%= user._id %>?_method=DELETE" method="post">
+<button class="m-auto btn btn-danger btn-sm" type="submit">Delete This Job</button>
+</form>
+
+<%- include('./partials/footer.ejs')  %>

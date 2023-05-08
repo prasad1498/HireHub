@@ -1,0 +1,24 @@
+<%- include('./partials/header.ejs')  %>
+
+    <h1></h1>
+    <div class="col-6 m-auto">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <div>
+                <label for="username" class="form-label">Username / Id :-</label>
+                <input type="text" class="form-control" name="username" id="username">
+            </div>
+            <div>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+
+            <div class="pt-3">
+                <button class="m-auto btn btn-primary btn-sm"type="submit">Submit</button>
+                <button class=" btn btn-danger btn-sm"type="delete"><a href="/notifications" style="text-decoration: none;">Cancle</a></button>
+            </div>
+        </form>
+
+    </div>
+
+    <%- include('./partials/footer.ejs')  %>

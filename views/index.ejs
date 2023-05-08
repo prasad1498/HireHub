@@ -1,0 +1,29 @@
+<%- include('./partials/header.ejs') %>
+
+<h1>This page will show all the jobs ( index page ) </h1>
+
+<form action="/jobs" method="get">
+  <input type="text" name="search">
+  <input type="submit" value="search">
+</form>
+<% for(let job of foundjob){ %>
+
+      <div class="card m-4">
+        <div class="card-header">
+            <%= job.address %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= job.name %></h5>
+          <p class="card-text"><%= job.info %></p>
+          <a href="/jobs/<%= job._id %>" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+
+
+    <% } %>
+        <br>
+        
+    
+
+
+<%- include('./partials/footer.ejs')  %>

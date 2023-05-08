@@ -1,0 +1,25 @@
+<%- include('./partials/header.ejs')  %>
+
+<di class="container">
+<div class="row"></div>
+    <span class="col-6 fs-3 fw-bold m-4" >This is notifications page </span>
+    <span class="col-6"><a href="/notifications/new" class="btn btn-primary"> Post new notification</a>
+    </span>
+
+    <% for(let notif of allNotif){ %>
+        <div>
+            <%= notif.body.slice(0,5) %>...
+        </div>
+        <div>
+            Company: <%= notif.author %>
+        </div>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="<%= notif.body %>">
+            Read more
+          </button>
+        <form action="/notifications/<%= notif._id %>?_method=DELETE" method="post">
+            <button class="m-auto btn btn-danger btn-sm mt-2 mb-4" type="submit">Delete</button>
+        </form>
+        
+        <% } %>
+    </di>
+    <%- include('./partials/footer.ejs')  %>
